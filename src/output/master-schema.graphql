@@ -1,0 +1,12 @@
+type Pet {
+  petName: String
+}
+
+type Query {
+  dog: Pet
+  me: User
+}
+
+type User {
+  personName: String
+}

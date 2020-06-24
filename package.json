@@ -6,7 +6,9 @@
   "scripts": {
     "schema:gen-types": "apollo client:codegen --localSchemaFile=\"./src/schemas/PersonSchema.graphql\" --includes=\"./src/operations/MeQuery.graphql\" --target=typescript --excludes=\"./src/schemas/**/*.graphql\"",
     "schema:gen-types2": "apollo client:codegen --target=typescript --config=\"./src/apollo-config.js\"",
-    "schema:gen-types3": "apollo client:codegen --localSchemaFile=\"src/schemas/PersonSchema.graphql,src/schemas/PetSchema.graphql\" --includes=\"./src/operations/**/*.graphql\" --target=typescript --excludes=\"./src/schemas/**/*.graphql\""
+    "schema:gen-types3": "apollo client:codegen --localSchemaFile=\"src/schemas/PersonSchema.graphql,src/schemas/PetSchema.graphql\" --includes=\"./src/operations/**/*.graphql\" --target=typescript --excludes=\"./src/schemas/**/*.graphql\"",
+    "schema:gen-types4": "apollo client:codegen --localSchemaFile=\"src/output/master-schema.graphql\" --includes=\"src/operations/**/*.graphql\" --target=typescript",
+    "codegen": "graphql-codegen"
   },
   "keywords": [],
   "author": "Alejandro Nanez",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.15.3",
+    "@graphql-codegen/schema-ast": "^1.15.4",
     "apollo": "^2.28.3"
   }
 }

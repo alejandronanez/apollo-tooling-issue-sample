@@ -1,0 +1,6 @@
+schema:
+  - './src/schemas/*.graphql'
+generates:
+  src/output/master-schema.graphql:
+    plugins:
+      - schema-ast
