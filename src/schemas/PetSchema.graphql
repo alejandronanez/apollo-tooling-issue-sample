@@ -1,0 +1,7 @@
+type Pet {
+  petName: String
+}
+
+extend type Query {
+  dog: Pet
+}

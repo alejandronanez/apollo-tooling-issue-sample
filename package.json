@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "schema:gen-types": "apollo client:codegen --localSchemaFile=\"./src/schemas/PersonSchema.graphql\" --includes=\"./src/operations/MeQuery.graphql\" --target=typescript --excludes=\"./src/schemas/**/*.graphql\"",
+    "schema:gen-types2": "apollo client:codegen --target=typescript --config=\"./src/apollo-config.js\"",
+    "schema:gen-types3": "apollo client:codegen --localSchemaFile=\"src/schemas/PersonSchema.graphql,src/schemas/PetSchema.graphql\" --includes=\"./src/operations/**/*.graphql\" --target=typescript --excludes=\"./src/schemas/**/*.graphql\""
   },
   "keywords": [],
   "author": "Alejandro Nanez",
