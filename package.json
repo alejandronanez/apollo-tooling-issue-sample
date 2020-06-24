@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "schema:gen-types": "apollo client:codegen --localSchemaFile=\"./src/schemas/PersonSchema.graphql\" --includes=\"./src/operations/MeQuery.graphql\" --target=typescript --excludes=\"./src/schemas/**/*.graphql\"",
-    "schema:gen-types2": "apollo client:codegen --target=typescript --config=\"./src/apollo-config.js\"",
-    "schema:gen-types3": "apollo client:codegen --localSchemaFile=\"src/schemas/PersonSchema.graphql,src/schemas/PetSchema.graphql\" --includes=\"./src/operations/**/*.graphql\" --target=typescript --excludes=\"./src/schemas/**/*.graphql\"",
-    "schema:gen-types4": "apollo client:codegen --localSchemaFile=\"src/output/master-schema.graphql\" --includes=\"src/operations/**/*.graphql\" --target=typescript",
+    "gen-types": "apollo client:codegen --target=typescript",
+    "gen-types:broken": "apollo client:codegen --config=src/apollo.config.js --target=typescript",
     "codegen": "graphql-codegen"
   },
   "keywords": [],
